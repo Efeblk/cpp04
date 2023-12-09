@@ -13,7 +13,7 @@ public:
     void settingType(std::string type);
     std::string getType() const;
     virtual void makeSound() const;
-    ~Animal();
+    virtual ~Animal();
 };
 
 #endif
