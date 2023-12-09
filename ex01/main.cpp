@@ -1,6 +1,7 @@
-#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "wrongAnimal.hpp"
+#include "wrongCat.hpp"
 
 int main() {
     const int size = 10; // Define the size of the array
@@ -23,6 +24,16 @@ int main() {
 
     // Don't forget to delete the array itself
     delete[] animals;
+
+    {
+        const wrongAnimal* meta = new wrongCat();
+        const wrongAnimal* i = new wrongCat();
+        std::cout << i->getType() << " " << std::endl;
+        i->makeSound();
+        meta->makeSound();
+        delete i;
+        delete meta;
+    }
 
     return 0;
 }

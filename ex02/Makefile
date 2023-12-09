@@ -4,7 +4,7 @@ FLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME = program
 
-SRC = wrongAnimal.cpp wrongCat.cpp Animal.cpp Cat.cpp Brain.cpp Dog.cpp main.cpp
+SRC = wrongAnimal.cpp wrongCat.cpp AAnimal.cpp Cat.cpp Brain.cpp Dog.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
