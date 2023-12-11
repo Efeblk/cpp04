@@ -2,24 +2,21 @@
 
 AAnimal::AAnimal()
 {
-    this->brain = new Brain();
     std::cout << "Animal constructor called" << std::endl;
 }
 
-AAnimal::AAnimal(const AAnimal &a)
+AAnimal::AAnimal(AAnimal const &copy)
 {
     std::cout << "Animal copy constructor called" << std::endl;
-    this->brain = new Brain();
-    *this = a;
+    *this = copy;
 }
 
-AAnimal &AAnimal::operator=(const AAnimal &a)
+AAnimal &AAnimal::operator=(AAnimal const &copy)
 {
     std::cout << "Animal assignation operator called" << std::endl;
-    if (this != &a)
+    if (this != &copy)
     {
-        this->type = a.type;
-        *(this->brain) = *(a.brain);
+        this->type = copy.type;
     }
     return (*this);
 }
@@ -41,6 +38,5 @@ void AAnimal::makeSound() const
 
 AAnimal::~AAnimal()
 {
-    delete this->brain;
     std::cout << "Animal destructor called" << std::endl;
 }

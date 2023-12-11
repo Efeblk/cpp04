@@ -4,6 +4,8 @@
 
 class Cat : public AAnimal
 {   
+private:
+    Brain *brain;
 public:
     Cat();
     Cat(const Cat &c);
@@ -13,4 +15,4 @@ public:
 
 };
 
-#endif // !
+#endif

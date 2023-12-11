@@ -4,6 +4,8 @@
 
 class Dog : public AAnimal
 { 
+private:
+    Brain *brain;
 public:
     Dog();
     Dog(const Dog &d);
@@ -12,4 +14,4 @@ public:
     void makeSound() const;
 };
 
-#endif
+#endif // !

@@ -12,8 +12,6 @@ int main() {
     for (int i = size / 2; i < size; i++) {
         animals[i] = new Cat();
     }
-    animals[0]
-
     for (int i = 0; i < size; i++) {
         delete animals[i];
     }
