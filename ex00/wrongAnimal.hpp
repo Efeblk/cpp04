@@ -1,7 +1,6 @@
 #include <iostream>
 #ifndef WRONGANIMAL_HPP
 #define WRONGANIMAL_HPP
-#include "Brain.hpp"
 
 class wrongAnimal
 {

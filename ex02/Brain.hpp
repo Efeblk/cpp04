@@ -1,4 +1,7 @@
 #include <iostream>
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
+
 class Brain
 {
 private:
@@ -11,3 +14,5 @@ public:
     void setIdeas(std::string idea);
     std::string getIdeas(int index) const;
 };
+
+#endif

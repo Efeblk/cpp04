@@ -8,8 +8,10 @@ class AAnimal
 protected:
     std::string type;
     Brain *brain;
-    AAnimal();
 public:
+    AAnimal();
+    AAnimal(const AAnimal &a);
+    AAnimal &operator=(const AAnimal &a);
     void settingType(std::string type);
     std::string getType() const;
     virtual void makeSound() const = 0;

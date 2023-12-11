@@ -3,8 +3,5 @@
 #include "Cat.hpp"
 
 int main() {
-
-
-
     return 0;
 }

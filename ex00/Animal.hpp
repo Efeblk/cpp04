@@ -7,10 +7,12 @@ protected:
     std::string type;
 public:
     Animal();
+    Animal(Animal const &copy);
+    Animal &operator=(Animal const &copy);
     void settingType(std::string type);
     std::string getType() const;
     virtual void makeSound() const;
-    ~Animal();
+    virtual ~Animal();
 };
 
 #endif

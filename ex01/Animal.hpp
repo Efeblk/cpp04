@@ -7,9 +7,10 @@ class Animal
 {
 protected:
     std::string type;
-    Brain *brain;
 public:
     Animal();
+    Animal(Animal const &copy);
+    Animal &operator=(Animal const &copy);
     void settingType(std::string type);
     std::string getType() const;
     virtual void makeSound() const;

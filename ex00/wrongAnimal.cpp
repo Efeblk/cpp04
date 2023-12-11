@@ -2,7 +2,6 @@
 
 wrongAnimal::wrongAnimal()
 {
-    this->brain = new Brain();
     std::cout << "wrongAnimal constructor called" << std::endl;
 }
 
@@ -14,7 +13,6 @@ void wrongAnimal::settingType(std::string type)
 wrongAnimal::wrongAnimal(const wrongAnimal &a)
 {
     std::cout << "wrongAnimal copy constructor called" << std::endl;
-    this->brain = new Brain();
     *this = a;
 }
 
@@ -24,7 +22,6 @@ wrongAnimal &wrongAnimal::operator=(const wrongAnimal &a)
     if (this != &a)
     {
         this->type = a.type;
-        *(this->brain) = *(a.brain);
     }
     return (*this);
 }
@@ -41,6 +38,5 @@ void wrongAnimal::makeSound() const
 
 wrongAnimal::~wrongAnimal()
 {
-    delete this->brain;
     std::cout << "wrongAnimal destructor called" << std::endl;
 }

@@ -7,9 +7,10 @@ class wrongAnimal
 {
 protected:
     std::string type;
-    Brain *brain;
 public:
     wrongAnimal();
+    wrongAnimal(const wrongAnimal &a);
+    wrongAnimal &operator=(const wrongAnimal &a);
     void settingType(std::string type);
     std::string getType() const;
     void makeSound() const;
