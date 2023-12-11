@@ -19,8 +19,9 @@ Dog &Dog::operator=(const Dog &d)
     std::cout << "Dog assignation operator called" << std::endl;
     if (this != &d)
     {
+        delete this->brain;
+        this->brain = new Brain(*d.brain);
         this->type = d.type;
-        *(this->brain) = *(d.brain);
     }
     return (*this);
 }

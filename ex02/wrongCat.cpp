@@ -19,8 +19,9 @@ wrongCat &wrongCat::operator=(const wrongCat &c)
     std::cout << "Cat assignation operator called" << std::endl;
     if (this != &c)
     {
+        delete this->brain;
+        this->brain = new Brain(*c.brain);
         this->type = c.type;
-        *(this->brain) = *(c.brain);
     }
     return (*this);
 }

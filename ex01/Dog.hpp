@@ -14,4 +14,4 @@ public:
     void makeSound() const;
 };
 
-#endif // !
+#endif

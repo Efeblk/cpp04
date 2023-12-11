@@ -15,6 +15,8 @@ int main() {
     for (int i = 0; i < size; i++) {
         delete animals[i];
     }
+    Brain *b = new Brain();
+    
     delete[] animals;
 
     {
